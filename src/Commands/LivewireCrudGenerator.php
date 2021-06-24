@@ -47,7 +47,7 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
         $this->argument = $this->getNameInput();
         $routeFile = base_path('routes/web.php');
         $routeContents = $this->filesystem->get($routeFile);
-        $routeItemStub = "\tRoute::view('" .     $this->getNameInput() . "', 'livewire." . $this->getNameInput() . ".index')->middleware('auth');";
+        $routeItemStub = "\tRoute::view('" .     $this->getNameInput() . "', 'livewire." . $this->getNameInput() . ".index')->name('" . $this->getNameInput() . ".index');";
         $routeItemHook = '//Route Hooks - Do not delete//';
 
         if (!Str::contains($routeContents, $routeItemStub)) {
@@ -60,7 +60,7 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
         $layoutFile = 'resources/views/layouts/app.blade.php';
         $layoutContents = $this->filesystem->get($layoutFile);
         $navItemStub = "\t\t\t\t\t\t<li class=\"nav-item\">
-                            <a href=\"{{ url('/" . $this->getNameInput() . "') }}\" class=\"nav-link\"><i class=\"fab fa-laravel text-info\"></i> " . ucfirst($this->getNameInput()) . "</a>
+                            <a href=\"{{ route('/" . $this->getNameInput() . "') }}\" class=\"nav-link\"><i class=\"fab fa-laravel text-info\"></i> " . ucfirst($this->getNameInput()) . "</a>
                         </li>";
         $navItemHook = '<!--Nav Bar Hooks - Do not delete!!-->';
 
