@@ -15,7 +15,10 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
     protected $argument;
     private $replaces = [];
 
-    protected $signature = 'crud:generate {name : Table name}';
+    protected $signature = 'crud:generate
+                            { name : Model name }
+                            { --route= : Route for crud generate }
+                            { --db= : Database for crud generate }';
 
     protected $description = 'Generate Livewire Component and CRUD operations';
 
@@ -26,7 +29,11 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
      */
     public function handle()
     {
-        $this->table = $this->getNameInput();
+        if (isset($this->option('db'))) {
+            $this->table = $this->option('db');
+        } else {
+            $this->table = $this->getNameInput();
+        }
 
         // If table not exist in DB return
         if (!$this->tableExists()) {
@@ -191,7 +198,7 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
      */
     private function _buildClassName()
     {
-        return Str::studly(Str::singular($this->table));
+        return Str::studly(Str::singular($this->name));
     }
 
     private function replace($content)

@@ -49,6 +49,12 @@ abstract class LivewireGeneratorCommand extends Command
     protected $name = null;
 
     /**
+     * Formatted Class name from Table.
+     * @var string
+     */
+    protected $route = null;
+
+    /**
      * Store the DB table columns.
      * @var array
      */
