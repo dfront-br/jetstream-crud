@@ -1,41 +1,42 @@
 {
-    "name": "flightsadmin/livewire-crud",
+    "name": "dfront-br/jetstream-crud",
     "description": "Scaffold Livewire Components, migrations, factory and crud in one command based on database tables",
     "keywords": [
-        "flightsadmin",
+        "Laravel",
         "livewire-crud"
     ],
-    "homepage": "https://github.com/flightsadmin/livewire-crud",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "George Chitechi",
-            "email": "george@flightsadmin.com",
+            "name": "Thiago Augusto",
+            "email": "dev.digitalfront@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "laravel/framework": "^6.0|^7.0|^8.0",
-        "laravel/ui": "^2|^3",
-        "livewire/livewire": "^2"
+        "php": "^7.4|^8.0",
+        "laravel/framework": "^8.0",
+        "laravel/jetstream": "^2.3",
+        "laravel/sanctum": "^2.6",
+        "livewire/livewire": "^2.5"
     },
-    "require-dev": {},
+    "require-dev": {
+        "laravel/sail": "^1.0.1"
+    },
     "autoload": {
         "psr-4": {
-            "Flightsadmin\\LivewireCrud\\": "src"
+            "Digitalfront\\JetstreamCrud\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flightsadmin\\LivewireCrud\\Tests\\": "tests"
+            "Digitalfront\\JetstreamCrud\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -43,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Flightsadmin\\LivewireCrud\\LivewireCrudServiceProvider"
+                "Digitalfront\\JetstreamCrud\\JetstreamCrudServiceProvider"
             ],
             "aliases": {
-                "LivewireCrud": "Flightsadmin\\LivewireCrud\\LivewireCrudFacade"
+                "JetstreamCrud": "Digitalfront\\JetstreamCrud\\JetstreamCrudFacade"
             }
         }
     }

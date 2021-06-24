@@ -1,18 +1,18 @@
 <?php
 
-namespace Flightsadmin\LivewireCrud\Tests;
+namespace Digitalfront\JetstreamCrud\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Flightsadmin\LivewireCrud\LivewireCrudServiceProvider;
+use Digitalfront\JetstreamCrud\JetstreamCrudServiceProvider;
 
 class ExampleTest extends TestCase
 {
 
     protected function getPackageProviders($app)
     {
-        return [LivewireCrudServiceProvider::class];
+        return [JetstreamCrudServiceProvider::class];
     }
-    
+
     /** @test */
     public function true_is_true()
     {

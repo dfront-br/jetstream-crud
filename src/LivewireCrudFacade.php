@@ -1,13 +1,13 @@
 <?php
 
-namespace Flightsadmin\LivewireCrud;
+namespace Digitalfront\JetstreamCrud;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Georgechitechi\LivewireCrud\Skeleton\SkeletonClass
+ * @see \Georgechitechi\JetstreamCrud\Skeleton\SkeletonClass
  */
-class LivewireCrudFacade extends Facade
+class JetstreamCrudFacade extends Facade
 {
     /**
      * Get the registered name of the component.

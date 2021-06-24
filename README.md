@@ -1,29 +1,30 @@
 # Livewire Crud Generator
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/flightsadmin/livewire-crud.svg?style=flat-square)](https://packagist.org/packages/flightsadmin/livewire-crud)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Digitalfront/livewire-crud.svg?style=flat-square)](https://packagist.org/packages/Digitalfront/livewire-crud)
 
-A livewire CRUD Generation package to help scaffold basic site files. Package is autoloaded as per PSR-4 autoloading in any laravel version `^5.6` so no extra config required. However is has been tested on version `^7 & ^8`. It uses ***auth*** middleware thus installs `laravel/ui` just incase you don't have any other auth mechanism, this does not mean you have to use `laravel/ui`.
+A livewire CRUD Generation package to help scaffold basic site files. Package is autoloaded as per PSR-4 autoloading in any laravel version `^5.6` so no extra config required. However is has been tested on version `^7 & ^8`. It uses **_auth_** middleware thus installs `laravel/ui` just incase you don't have any other auth mechanism, this does not mean you have to use `laravel/ui`.
 
 ## Documentation
 
-More detailed documentation can ne found at [livewire-crud](https://flightsadmin.github.io/#/)
+More detailed documentation can ne found at [livewire-crud](https://Digitalfront.github.io/#/)
 
 ## Installation
 
 You can install the package via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require flightsadmin/livewire-crud
+composer require Digitalfront/livewire-crud
 ```
 
 ## Usage
 
-After running `composer require flightsadmin/livewire-crud` command just run:
+After running `composer require Digitalfront/livewire-crud` command just run:
 
 ```bash
 php artisan crud:install
 ```
-**This command will perfom below actions:
+
+\*\*This command will perfom below actions:
 
     * Compile css/js based on `bootstrap and fontawesome/free`.
     * Run `npm install && run dev`
@@ -37,14 +38,15 @@ Then generate Crud by:
 ```bash
 php artisan crud:generate {table-name}
 ```
-**This command will generate:
+
+\*\*This command will generate:
 
     * Livewire Component.
     * Model.
-    * Views.    
+    * Views.
     * Factory.
-    
-**Remember to customise your genertaed factories and migrations if you need to use them later
+
+\*\*Remember to customise your genertaed factories and migrations if you need to use them later
 
 ### Changelog
 
@@ -56,12 +58,12 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email george@flightsadmin.com instead of using the issue tracker.
+If you discover any security related issues, please email george@Digitalfront.com instead of using the issue tracker.
 
 ## Credits
 
-- [George Chitechi](https://github.com/flightsadmin)
-- [All Contributors](../../contributors)
+-   [George Chitechi](https://github.com/Digitalfront)
+-   [All Contributors](../../contributors)
 
 ## License
 

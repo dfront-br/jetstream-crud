@@ -1,6 +1,6 @@
 <?php
 
-namespace Flightsadmin\LivewireCrud\Commands;
+namespace Digitalfront\JetstreamCrud\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
