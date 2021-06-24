@@ -10,7 +10,7 @@ class {{modelName}}s extends Component
 {
     use WithPagination;
 
-    public idModel = null;
+    public $idModel = null;
 	protected $paginationTheme = 'bootstrap';
     public $selected_id, $keyWord, {{updatefield}};
     public $updateMode = false;
