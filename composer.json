@@ -2,7 +2,7 @@
     "name": "dfront-br/jetstream-crud",
     "description": "Scaffold Livewire Components, migrations, factory and crud in one command based on database tables",
     "keywords": [
-        "Laravel",
+        "laravel",
         "livewire-crud"
     ],
     "license": "MIT",

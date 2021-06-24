@@ -1,0 +1,12 @@
+<!-- BEGIN: Main Menu-->
+<style>
+.bordered-layout .main-menu .navigation, .bordered-layout .main-menu {
+    background: #10163a !important;
+}
+</style>
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <x-logo-dashboard />
+    <div class="shadow-bottom"></div>
+    <x-menu-dashboard />
+</div>
+<!-- END: Main Menu-->

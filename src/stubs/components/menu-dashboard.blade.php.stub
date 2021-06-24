@@ -1,0 +1,16 @@
+<div class="navbar-container main-menu-content" data-menu="menu-container">
+    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        {{-- @foreach ($menuDesktop as $item)
+            <x-menu-item :item="$item" />
+        @endforeach --}}
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class="nav-item {{ request()->routeIs('dashboard.*') === true ? 'active' : '' }}">
+                <a class="nav-link d-flex align-items-center" href="{{ route('dashboard.index') }}">
+                    <i data-feather="layout"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!--Nav Bar Hooks - Do not delete!!-->
+        </ul>
+    </ul>
+</div>

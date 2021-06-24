@@ -57,10 +57,10 @@ class JetstreamCrudGenerator extends LivewireGeneratorCommand
         }
 
         //Updating Nav Bar
-        $layoutFile = 'resources/views/layouts/app.blade.php';
+        $layoutFile = 'resources/views/components/menu-dashboard.blade.php';
         $layoutContents = $this->filesystem->get($layoutFile);
-        $navItemStub = "\t\t\t\t\t\t<li class=\"nav-item\">
-                            <a href=\"{{ route('/" . $this->getNameInput() . "') }}\" class=\"nav-link\"><i class=\"fab fa-laravel text-info\"></i> " . ucfirst($this->getNameInput()) . "</a>
+        $navItemStub = "\t\t\t\t\t\t<li class=\"nav-item {{ request()->routeIs('" . $this->getNameInput() . ".*') === true ? 'active' : '' }}\">
+                            <a href=\"{{ route('/" . $this->getNameInput() . "') }}\" class=\"nav-link\"> <i data-feather=\"circle\"></i> <span>" . ucfirst($this->getNameInput()) . " </span></a>
                         </li>";
         $navItemHook = '<!--Nav Bar Hooks - Do not delete!!-->';
 

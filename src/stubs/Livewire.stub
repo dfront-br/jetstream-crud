@@ -10,25 +10,33 @@ class {{modelName}}s extends Component
 {
     use WithPagination;
 
+    public idModel = null;
 	protected $paginationTheme = 'bootstrap';
     public $selected_id, $keyWord, {{updatefield}};
     public $updateMode = false;
 
     public function render()
     {
+        if($this->idModel == null) {
 		$keyWord = '%'.$this->keyWord .'%';
         return view('livewire.{{modelNamePluralLowerCase}}.view', [
             '{{modelNamePluralLowerCase}}' => {{modelName}}::latest(){{search}}
 						->paginate(10),
         ]);
+        } else {
+            $keyWord = '%'.$this->keyWord .'%';
+        return view('livewire.{{modelNamePluralLowerCase}}.show', [
+            '{{modelNameLowerCase}}' => {{modelName}}::findOrFail($this->idModel),
+        ]);
+        }
     }
-	
+
     public function cancel()
     {
         $this->resetInput();
         $this->updateMode = false;
     }
-	
+
     private function resetInput()
     {		{{resetfields}}
     }
@@ -40,7 +48,7 @@ class {{modelName}}s extends Component
 
         {{modelName}}::create([ {{addfields}}
         ]);
-        
+
         $this->resetInput();
 		$this->emit('closeModal');
 		session()->flash('message', '{{modelName}} Successfully created.');
@@ -51,7 +59,7 @@ class {{modelName}}s extends Component
         $record = {{modelName}}::findOrFail($id);
 
         $this->selected_id = $id; {{editfields}}
-		
+
         $this->updateMode = true;
     }
 
