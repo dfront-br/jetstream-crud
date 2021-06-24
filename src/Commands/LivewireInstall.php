@@ -26,7 +26,7 @@ class LivewireInstall extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/livewire'));
         if ($this->confirm('This will delete compiled assets in public folder. It will Re-Compile this. Do you want to proceed?') == 'yes') {
             if ($this->confirm('Do you want to scaffold Authentication files? Only skip if you have authentication system on your App') == 'yes') {
-                Artisan::call('ui:auth', [], $this->getOutput());
+                Artisan::call('jetstream:install livewire', [], $this->getOutput());
             }
             $routeFile = base_path('routes/web.php');
             $string = file_get_contents($routeFile);
